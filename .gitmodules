@@ -1,0 +1,30 @@
+[submodule "skills/de-ai-taste"]
+	path = skills/de-ai-taste
+	url = https://github.com/ruodou233/de-ai-taste.git
+[submodule "skills/wisdom-roundtable"]
+	path = skills/wisdom-roundtable
+	url = https://github.com/ruodou233/wisdom-roundtable.git
+[submodule "skills/domain-explorer"]
+	path = skills/domain-explorer
+	url = https://github.com/ruodou233/domain-explorer.git
+[submodule "skills/free-token-eggs"]
+	path = skills/free-token-eggs
+	url = https://github.com/ruodou233/free-token-eggs.git
+[submodule "skills/improve-product-plan"]
+	path = skills/improve-product-plan
+	url = https://github.com/ruodou233/improve-product-plan.git
+[submodule "skills/claude-cache-keepalive"]
+	path = skills/claude-cache-keepalive
+	url = https://github.com/ruodou233/claude-cache-keepalive.git
+[submodule "skills/connect-computers"]
+	path = skills/connect-computers
+	url = https://github.com/ruodou233/connect-computers.git
+[submodule "skills/cross-review"]
+	path = skills/cross-review
+	url = https://github.com/ruodou233/cross-review.git
+[submodule "skills/agent-orchestration"]
+	path = skills/agent-orchestration
+	url = https://github.com/ruodou233/agent-orchestration.git
+[submodule "skills/upgrade-audit"]
+	path = skills/upgrade-audit
+	url = https://github.com/ruodou233/upgrade-audit.git

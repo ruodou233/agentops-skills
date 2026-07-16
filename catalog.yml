@@ -1,0 +1,65 @@
+# agentops-skills 机器可读清单
+# 字段：repo=公开仓；install_name=安装到 skills 目录的名字；requires=硬依赖（缺了不可用）；
+#       recommends=软关联（缺了降级可用，降级行为写在各 skill 正文）；platforms=适用平台目录
+# 目标目录：claude=~/.claude/skills/  codex=~/.codex/skills/
+skills:
+  - repo: https://github.com/ruodou233/de-ai-taste
+    path: skills/de-ai-taste
+    install_name: de-ai-taste
+    requires: []
+    recommends: []
+    platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/wisdom-roundtable
+    path: skills/wisdom-roundtable
+    install_name: wisdom-roundtable
+    requires: []
+    recommends: [domain-explorer, improve-product-plan]
+    platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/domain-explorer
+    path: skills/domain-explorer
+    install_name: domain-explorer
+    requires: []
+    recommends: [wisdom-roundtable, improve-product-plan]
+    platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/improve-product-plan
+    path: skills/improve-product-plan
+    install_name: improve-product-plan
+    requires: []
+    recommends: [domain-explorer, wisdom-roundtable]
+    platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/free-token-eggs
+    path: skills/free-token-eggs
+    install_name: free-token-eggs
+    requires: []
+    recommends: []
+    platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/claude-cache-keepalive
+    path: skills/claude-cache-keepalive
+    install_name: cache-keepalive
+    requires: []
+    recommends: []
+    platforms: [claude]
+  - repo: https://github.com/ruodou233/connect-computers
+    path: skills/connect-computers
+    install_name: connect-computers
+    requires: []
+    recommends: []
+    platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/cross-review
+    path: skills/cross-review
+    install_name: cross-review
+    requires: []
+    recommends: [agent-orchestration]
+    platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/agent-orchestration
+    path: skills/agent-orchestration
+    install_name: agent-orchestration
+    requires: []
+    recommends: [cross-review]
+    platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/upgrade-audit
+    path: skills/upgrade-audit
+    install_name: upgrade-audit
+    requires: []
+    recommends: [cross-review]
+    platforms: [claude, codex]
