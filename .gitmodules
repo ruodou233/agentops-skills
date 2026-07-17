@@ -31,3 +31,6 @@
 [submodule "skills/audio-transcribe"]
 	path = skills/audio-transcribe
 	url = https://github.com/ruodou233/audio-transcribe.git
+[submodule "skills/smart-buyer"]
+	path = skills/smart-buyer
+	url = https://github.com/ruodou233/smart-buyer.git

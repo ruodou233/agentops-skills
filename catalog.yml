@@ -27,6 +27,12 @@ skills:
     requires: []
     recommends: [domain-explorer, wisdom-roundtable]
     platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/smart-buyer
+    path: skills/smart-buyer
+    install_name: smart-buyer
+    requires: []
+    recommends: []
+    platforms: [claude, codex]
   - repo: https://github.com/ruodou233/free-token-eggs
     path: skills/free-token-eggs
     install_name: free-token-eggs
