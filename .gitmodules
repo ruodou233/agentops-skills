@@ -28,3 +28,6 @@
 [submodule "skills/upgrade-audit"]
 	path = skills/upgrade-audit
 	url = https://github.com/ruodou233/upgrade-audit.git
+[submodule "skills/audio-transcribe"]
+	path = skills/audio-transcribe
+	url = https://github.com/ruodou233/audio-transcribe.git

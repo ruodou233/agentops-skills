@@ -63,3 +63,9 @@ skills:
     requires: []
     recommends: [cross-review]
     platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/audio-transcribe
+    path: skills/audio-transcribe
+    install_name: audio-transcribe
+    requires: []
+    recommends: []
+    platforms: [claude, codex]
