@@ -34,3 +34,12 @@
 [submodule "skills/smart-buyer"]
 	path = skills/smart-buyer
 	url = https://github.com/ruodou233/smart-buyer.git
+[submodule "skills/community-buzz"]
+	path = skills/community-buzz
+	url = https://github.com/ruodou233/community-buzz.git
+[submodule "skills/turn-guard"]
+	path = skills/turn-guard
+	url = https://github.com/ruodou233/turn-guard.git
+[submodule "skills/polymarket-anomaly-watch"]
+	path = skills/polymarket-anomaly-watch
+	url = https://github.com/ruodou233/polymarket-anomaly-watch.git

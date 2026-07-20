@@ -31,6 +31,18 @@ skills:
     path: skills/smart-buyer
     install_name: smart-buyer
     requires: []
+    recommends: [community-buzz]
+    platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/community-buzz
+    path: skills/community-buzz
+    install_name: community-buzz
+    requires: []
+    recommends: [smart-buyer]
+    platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/polymarket-anomaly-watch
+    path: skills/polymarket-anomaly-watch
+    install_name: polymarket-anomaly-watch
+    requires: []
     recommends: []
     platforms: [claude, codex]
   - repo: https://github.com/ruodou233/free-token-eggs

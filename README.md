@@ -4,6 +4,12 @@
 
 本仓库用 git submodule 聚合作者开源的全部 skill。想要全套的，装这一个仓库；只想要某一个的，直接去对应的单独仓库（见下表链接）。
 
+## 设计原理
+
+- **聚合层只引用、不复制**：本仓不复制任何 skill 正文，只用 git submodule 指向各单仓的具体 commit——同一份内容不在聚合层第二处维护（双写必然漂移），submodule 指针同时充当版本锁。
+- **核心流程单仓可用**：每个单仓包含运行核心流程所需的正文与资产，`SKILL.md` 是唯一入口约定（install.sh 也以 SKILL.md 存在与否判定合法 skill）。正文区分"通用方法"与"作者实现参考"，后者描述作者环境、均已标注并给出跳过或替代路径，不是运行前提。
+- **规则先讲理由**：正文规则尽量先交代为什么、再给要求，方便你的 AI 在规则没覆盖的场景下正确变通，也方便你按需删改。
+
 ## Skill 清单与关联
 
 | Skill | 用途 | 关联（缺失时的影响） |
@@ -20,6 +26,14 @@
 | [agent-orchestration](https://github.com/ruodou233/agent-orchestration) | 长任务/过夜任务多代理编排方法论 | 独立可用；与 cross-review 搭配收益更大 |
 | [upgrade-audit](https://github.com/ruodou233/upgrade-audit) | 每日自主升级审计：知识沉淀进长期文档体系 | 独立可用；产出可喂给 cross-review 审查 |
 | [audio-transcribe](https://github.com/ruodou233/audio-transcribe) | 音频转文字全流程：找稿判断 + 按价格/质量分档选型 + 双ASR交叉验证 | 独立可用 |
+| [community-buzz](https://github.com/ruodou233/community-buzz) | 社区口碑挖掘：只保留爱好者社区评论区讨论度高的真实讨论 | 独立可用；与 smart-buyer 搭配做购物决策的社区验证 |
+| [polymarket-anomaly-watch](https://github.com/ruodou233/polymarket-anomaly-watch) | 每日扫描 Polymarket 异动 + GitHub 热榜 + App Store 中美榜单 | 独立可用；不含通知推送层，需自行接入 |
+
+以下不是常规 skill（没有 SKILL.md，install.sh 不会自动安装），按各自 README 手动接入：
+
+| 项目 | 用途 | 备注 |
+|---|---|---|
+| [turn-guard](https://github.com/ruodou233/turn-guard) | Claude Code 回合级流程守护 hook（L1确定性提醒+可选L2语义分类器） | 轻量发布，未做教程化包装；L2 默认关闭，作者本机仍是 A/B 实验状态 |
 
 各 skill 缺少"路由邻居"时的行为：正文中的跨 skill 转介绍语句失效，Agent 应忽略该转介、继续用当前 skill 完成任务（每个 skill 都自包含）。
 
@@ -32,7 +46,11 @@ cd agentops-skills
 ./install.sh de-ai-taste wisdom-roundtable   # 只装指定的
 ```
 
-install.sh 会逐仓拉取（单仓失败不影响其他仓）并把各 skill 链接到 `~/.claude/skills/` 与 `~/.codex/skills/`（已存在同名目录时拒绝并提示，不覆盖）。没有 git 或脚本不适用时，把仓库内容交给你的 AI，它会懂得怎么装。
+install.sh 会逐仓拉取（单仓失败不影响其他仓）并把各 skill 链接到 `~/.claude/skills/` 与 `~/.codex/skills/`——Claude Code 和 Codex 分别从这两个目录自动发现 skill（已存在同名目录时拒绝并提示，不覆盖）。脚本需要 bash 和 `python3`（解析 catalog.yml）；安装是 symlink 指向本 clone，装完后不要移动或删除本目录，否则链接全部失效。
+
+其他安装路径：
+- **没有 git**：聚合仓压缩包里 `skills/` 各子目录是空的（submodule 不随压缩包），不要用它；按上表或 `catalog.yml` 的仓库地址逐个下载单仓压缩包，确认目录内有 `SKILL.md` 后复制进平台 skill 目录。
+- **Windows**：原生 Claude/Codex 客户端请把 skill 复制到 Windows 用户目录下的对应 skill 目录；WSL 里跑 install.sh 建的链接只对运行在同一 WSL 内的 Agent 可见。
 
 ## 版本
 
