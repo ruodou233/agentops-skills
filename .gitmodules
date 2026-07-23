@@ -43,3 +43,6 @@
 [submodule "skills/polymarket-anomaly-watch"]
 	path = skills/polymarket-anomaly-watch
 	url = https://github.com/ruodou233/polymarket-anomaly-watch.git
+[submodule "skills/codex-reset-watch"]
+	path = skills/codex-reset-watch
+	url = https://github.com/ruodou233/codex-reset-watch.git

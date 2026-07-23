@@ -27,6 +27,7 @@
 | [upgrade-audit](https://github.com/ruodou233/upgrade-audit) | 每日自主升级审计：知识沉淀进长期文档体系 | 独立可用；产出可喂给 cross-review 审查 |
 | [audio-transcribe](https://github.com/ruodou233/audio-transcribe) | 音频转文字全流程：找稿判断 + 按价格/质量分档选型 + 双ASR交叉验证 | 独立可用 |
 | [community-buzz](https://github.com/ruodou233/community-buzz) | 社区口碑挖掘：只保留爱好者社区评论区讨论度高的真实讨论 | 独立可用；与 smart-buyer 搭配做购物决策的社区验证 |
+| [codex-reset-watch](https://github.com/ruodou233/codex-reset-watch) | Codex 额度哨兵：结合本机周额度与临时重置信号，给出保守的使用建议 | 独立可用；自动读取需本机 Codex CLI，也支持手动输入 |
 | [polymarket-anomaly-watch](https://github.com/ruodou233/polymarket-anomaly-watch) | 每日扫描 Polymarket 异动 + GitHub 热榜 + App Store 中美榜单 | 独立可用；不含通知推送层，需自行接入 |
 
 以下不是常规 skill（没有 SKILL.md，install.sh 不会自动安装），按各自 README 手动接入：

@@ -39,6 +39,12 @@ skills:
     requires: []
     recommends: [smart-buyer]
     platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/codex-reset-watch
+    path: skills/codex-reset-watch
+    install_name: codex-reset-watch
+    requires: []
+    recommends: []
+    platforms: [claude, codex]
   - repo: https://github.com/ruodou233/polymarket-anomaly-watch
     path: skills/polymarket-anomaly-watch
     install_name: polymarket-anomaly-watch
