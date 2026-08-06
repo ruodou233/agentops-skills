@@ -9,23 +9,17 @@ skills:
     requires: []
     recommends: []
     platforms: [claude, codex]
-  - repo: https://github.com/ruodou233/wisdom-roundtable
-    path: skills/wisdom-roundtable
-    install_name: wisdom-roundtable
-    requires: []
-    recommends: [domain-explorer, improve-product-plan]
-    platforms: [claude, codex]
   - repo: https://github.com/ruodou233/domain-explorer
     path: skills/domain-explorer
     install_name: domain-explorer
     requires: []
-    recommends: [wisdom-roundtable, improve-product-plan]
+    recommends: [improve-product-plan]
     platforms: [claude, codex]
   - repo: https://github.com/ruodou233/improve-product-plan
     path: skills/improve-product-plan
     install_name: improve-product-plan
     requires: []
-    recommends: [domain-explorer, wisdom-roundtable]
+    recommends: [domain-explorer]
     platforms: [claude, codex]
   - repo: https://github.com/ruodou233/smart-buyer
     path: skills/smart-buyer

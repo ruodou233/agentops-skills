@@ -15,9 +15,8 @@
 | Skill | 用途 | 关联（缺失时的影响） |
 |---|---|---|
 | [de-ai-taste](https://github.com/ruodou233/de-ai-taste) | 中文去AI味审阅：双层报告 + 质量净收益三档 + 改写幅度档位 | 独立可用 |
-| [wisdom-roundtable](https://github.com/ruodou233/wisdom-roundtable) | 11 位思想家并行分析重大决策 | 独立可用 |
-| [domain-explorer](https://github.com/ruodou233/domain-explorer) | 速通新领域，产出交互知识地图 | 独立可用；与 wisdom-roundtable / improve-product-plan 互为路由邻居 |
-| [improve-product-plan](https://github.com/ruodou233/improve-product-plan) | 把模糊产品想法打磨成可开发的 SPEC.md | 独立可用；同上互为路由邻居 |
+| [domain-explorer](https://github.com/ruodou233/domain-explorer) | 速通新领域，产出交互知识地图 | 独立可用；与 improve-product-plan 互为路由邻居 |
+| [improve-product-plan](https://github.com/ruodou233/improve-product-plan) | 把模糊产品想法打磨成可开发的 SPEC.md | 独立可用；与 domain-explorer 互为路由邻居 |
 | [smart-buyer](https://github.com/ruodou233/smart-buyer) | 正反双轨设标，核实 SKU、价格、风险与社区口碑后给出购物推荐 | 独立可用 |
 | [free-token-eggs](https://github.com/ruodou233/free-token-eggs) | 中国 AI 平台免费额度领取指南 | 独立可用 |
 | [claude-cache-keepalive](https://github.com/ruodou233/claude-cache-keepalive) | Claude 侧缓存保温节拍策略 | 独立可用；仅适用 Claude 系环境 |
@@ -44,7 +43,7 @@
 git clone https://github.com/ruodou233/agentops-skills.git
 cd agentops-skills
 ./install.sh            # 全量安装
-./install.sh de-ai-taste wisdom-roundtable   # 只装指定的
+./install.sh de-ai-taste   # 只装指定的
 ```
 
 install.sh 会逐仓拉取（单仓失败不影响其他仓）并把各 skill 链接到 `~/.claude/skills/` 与 `~/.codex/skills/`——Claude Code 和 Codex 分别从这两个目录自动发现 skill（已存在同名目录时拒绝并提示，不覆盖）。脚本需要 bash 和 `python3`（解析 catalog.yml）；安装是 symlink 指向本 clone，装完后不要移动或删除本目录，否则链接全部失效。

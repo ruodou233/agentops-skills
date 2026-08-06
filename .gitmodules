@@ -1,9 +1,6 @@
 [submodule "skills/de-ai-taste"]
 	path = skills/de-ai-taste
 	url = https://github.com/ruodou233/de-ai-taste.git
-[submodule "skills/wisdom-roundtable"]
-	path = skills/wisdom-roundtable
-	url = https://github.com/ruodou233/wisdom-roundtable.git
 [submodule "skills/domain-explorer"]
 	path = skills/domain-explorer
 	url = https://github.com/ruodou233/domain-explorer.git
