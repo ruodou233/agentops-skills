@@ -21,7 +21,7 @@
 | [free-token-eggs](https://github.com/ruodou233/free-token-eggs) | 中国 AI 平台免费额度领取指南 | 独立可用 |
 | [claude-cache-keepalive](https://github.com/ruodou233/claude-cache-keepalive) | Claude 侧缓存保温节拍策略 | 独立可用；仅适用 Claude 系环境 |
 | [connect-computers](https://github.com/ruodou233/connect-computers) | 多电脑互联：VPN/SSH/远程屏幕/远端 Agent | 独立可用 |
-| [cross-review](https://github.com/ruodou233/cross-review) | 跨公司模型独立审查协议 + 参考实现 | 独立可用；与 agent-orchestration 搭配收益更大 |
+| [cross-review](https://github.com/ruodou233/cross-review) | issues / simplification / research 三路独立审查协议 | 独立可用；与 agent-orchestration 搭配收益更大 |
 | [agent-orchestration](https://github.com/ruodou233/agent-orchestration) | 长任务/过夜任务多代理编排方法论 | 独立可用；与 cross-review 搭配收益更大 |
 | [upgrade-audit](https://github.com/ruodou233/upgrade-audit) | 每日自主升级审计：知识沉淀进长期文档体系 | 独立可用；产出可喂给 cross-review 审查 |
 | [audio-transcribe](https://github.com/ruodou233/audio-transcribe) | 音频转文字全流程：找稿判断 + 按价格/质量分档选型 + 双ASR交叉验证 | 独立可用 |
