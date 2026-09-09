@@ -2,7 +2,17 @@
 
 > **这是作者电脑上的实际实现方案。** 所有 skill 都在作者的日常工作流中真实运行；你的 AI（Claude Code、Codex 或其他 Agent）可以根据自身环境和配置对它们做轻度调整——每个 skill 的正文都写明了哪些部分是"作者实现参考"、哪些是通用方法。
 
-本仓库用 git submodule 聚合作者开源的全部 skill。想要全套的，装这一个仓库；只想要某一个的，直接去对应的单独仓库（见下表链接）。
+这套 skill 是我平时拿来干活的：查资料、做选择、写东西、做产品，再把长任务和多台电脑安排起来。原来给一个具体问题写的招数，也可以拿去解决别的同类问题，各仓 README 里都有具体用法。
+
+本仓库用 git submodule 把下表这些 skill 装到一起。想一次装一套的，用这个仓库；只想要某一个的，直接去对应单仓。
+
+## 从你要干的事开始
+
+- **调研和选型**：`domain-explorer` 先把领域摸清，`smart-buyer` 比商品、软件、服务和技术方案，`community-buzz` 看真实体验和争议。
+- **把想法做出来**：`improve-product-plan` 把工具、应用和自动化想法整理成能交给 AI 开发的说明，再用 `cross-review` 看看哪里漏了、哪里复杂了。
+- **处理资料和写作**：`audio-transcribe` 把会议、访谈、课程、播客转成文字，`de-ai-taste` 帮文章、讲稿和口播去掉机器感。
+- **把大活交给 AI**：`agent-orchestration` 分工跑长任务，`connect-computers` 连起设备，`upgrade-audit` 把干活的经验留下来。
+- **额度花在值得的地方**：`free-token-eggs` 看看有什么鸡蛋可领，`codex-reset-watch` 看今天能怎么蹬，`cache-keepalive` 算算长会话保温值不值。
 
 ## 设计原理
 
@@ -14,28 +24,30 @@
 
 | Skill | 用途 | 关联（缺失时的影响） |
 |---|---|---|
-| [de-ai-taste](https://github.com/ruodou233/de-ai-taste) | 中文去AI味审阅：双层报告 + 质量净收益三档 + 改写幅度档位 | 独立可用 |
-| [domain-explorer](https://github.com/ruodou233/domain-explorer) | 速通新领域，产出交互知识地图 | 独立可用；与 improve-product-plan 互为路由邻居 |
-| [improve-product-plan](https://github.com/ruodou233/improve-product-plan) | 把模糊产品想法打磨成可开发的 SPEC.md | 独立可用；与 domain-explorer 互为路由邻居 |
-| [smart-buyer](https://github.com/ruodou233/smart-buyer) | 正反双轨设标，核实 SKU、价格、风险与社区口碑后给出购物推荐 | 独立可用 |
-| [free-token-eggs](https://github.com/ruodou233/free-token-eggs) | 中国 AI 平台免费额度领取指南 | 独立可用 |
-| [claude-cache-keepalive](https://github.com/ruodou233/claude-cache-keepalive) | Claude 侧缓存保温节拍策略 | 独立可用；仅适用 Claude 系环境 |
-| [connect-computers](https://github.com/ruodou233/connect-computers) | 多电脑互联：VPN/SSH/远程屏幕/远端 Agent | 独立可用 |
-| [cross-review](https://github.com/ruodou233/cross-review) | issues / simplification / research 三路独立审查协议 | 独立可用；与 agent-orchestration 搭配收益更大 |
-| [agent-orchestration](https://github.com/ruodou233/agent-orchestration) | 长任务/过夜任务多代理编排方法论 | 独立可用；与 cross-review 搭配收益更大 |
-| [upgrade-audit](https://github.com/ruodou233/upgrade-audit) | 每日自主升级审计：知识沉淀进长期文档体系 | 独立可用；产出可喂给 cross-review 审查 |
-| [audio-transcribe](https://github.com/ruodou233/audio-transcribe) | 音频转文字全流程：找稿判断 + 按价格/质量分档选型 + 双ASR交叉验证 | 独立可用 |
-| [community-buzz](https://github.com/ruodou233/community-buzz) | 社区口碑挖掘：只保留爱好者社区评论区讨论度高的真实讨论 | 独立可用；与 smart-buyer 搭配做购物决策的社区验证 |
-| [codex-reset-watch](https://github.com/ruodou233/codex-reset-watch) | Codex 额度哨兵：结合本机周额度与临时重置信号，给出保守的使用建议 | 独立可用；自动读取需本机 Codex CLI，也支持手动输入 |
-| [polymarket-anomaly-watch](https://github.com/ruodou233/polymarket-anomaly-watch) | 每日扫描 Polymarket 异动 + GitHub 热榜 + App Store 中美榜单 | 独立可用；不含通知推送层，需自行接入 |
+| [de-ai-taste](https://github.com/ruodou233/de-ai-taste) | 中文去 AI 味：文章、演讲稿、口播和产品文案，改完还像你自己写的 | 独立可用 |
+| [domain-explorer](https://github.com/ruodou233/domain-explorer) | 速通新领域：入门、转行、选课题，先把来龙去脉和各路说法弄明白 | 独立可用；与 improve-product-plan 互为路由邻居 |
+| [improve-product-plan](https://github.com/ruodou233/improve-product-plan) | 想做成一个作品？把应用、工具、自动化和游戏想法打磨成能开工的方案 | 独立可用；与 domain-explorer 互为路由邻居 |
+| [smart-buyer](https://github.com/ruodou233/smart-buyer) | 聪明买手：买东西、选软件、找服务、比技术方案，先研究明白再选 | 独立可用 |
+| [free-token-eggs](https://github.com/ruodou233/free-token-eggs) | 免费 Token 领鸡蛋：做原型、试模型，先看看哪些 AI 额度值得领 | 独立可用 |
+| [claude-cache-keepalive](https://github.com/ruodou233/claude-cache-keepalive) | 缓存保温：实测命中、算清收益，让长会话少花冤枉 token | 独立可用；本套餐当前安装到 Claude，其他链路按单仓说明实测 |
+| [connect-computers](https://github.com/ruodou233/connect-computers) | 把电脑连起来：轻薄本调家中工作机，闲置电脑跑任务，出门也能接着干 | 独立可用 |
+| [cross-review](https://github.com/ruodou233/cross-review) | AI 的活总差一点？三路独立审方案、找遗漏、减复杂度 | 独立可用；与 agent-orchestration 搭配收益更大 |
+| [agent-orchestration](https://github.com/ruodou233/agent-orchestration) | 长任务不用一直盯着：批量调研、读长文、做产物，让 Agent 分工接着干 | 独立可用；与 cross-review 搭配收益更大 |
+| [upgrade-audit](https://github.com/ruodou233/upgrade-audit) | 把你教过 AI 的东西留下来：沉淀偏好、复盘踩坑、更新 skill 和工作流程 | 独立可用；产出可喂给 cross-review 审查 |
+| [audio-transcribe](https://github.com/ruodou233/audio-transcribe) | 把会议、访谈、课程和播客变成文字稿，需要说话人、时间戳和字幕也能安排 | 独立可用 |
+| [community-buzz](https://github.com/ruodou233/community-buzz) | 想听真实口碑？从社区里挖使用体验、竞品痛点和技术争议 | 独立可用；可单独调研口碑，也可补充 smart-buyer 的实践反馈 |
+| [codex-reset-watch](https://github.com/ruodou233/codex-reset-watch) | Codex 额度哨兵：看看还能蹬多久，重任务该现在上还是缓一缓 | 独立可用；自动读取需本机 Codex CLI，也支持手动输入 |
+| [polymarket-anomaly-watch](https://github.com/ruodou233/polymarket-anomaly-watch) | 每天醒来看看有什么新动静：市场异动、开源热榜和应用榜单替你盯着 | 独立可用；不含通知推送层，需自行接入 |
 
 以下不是常规 skill（没有 SKILL.md，install.sh 不会自动安装），按各自 README 手动接入：
 
 | 项目 | 用途 | 备注 |
 |---|---|---|
-| [turn-guard](https://github.com/ruodou233/turn-guard) | Claude Code 回合级流程守护 hook（L1确定性提醒+可选L2语义分类器） | 轻量发布，未做教程化包装；L2 默认关闭，作者本机仍是 A/B 实验状态 |
+| [turn-guard](https://github.com/ruodou233/turn-guard) | Claude Code 老忘流程？把该做的检查变成每回合提醒 | 轻量发布，未做教程化包装；L2 默认关闭，作者本机仍是 A/B 实验状态 |
 
 各 skill 缺少"路由邻居"时的行为：正文中的跨 skill 转介绍语句失效，Agent 应忽略该转介、继续用当前 skill 完成任务（每个 skill 都自包含）。
+
+另有 [craft-frontend-ppt](https://github.com/ruodou233/craft-frontend-ppt) 做网页演讲、作品集与交互文章，[web-access](https://github.com/ruodou233/web-access) 处理网页资料与交互；可到单仓安装。更多项目见 [作者主页](https://github.com/ruodou233)。
 
 ## 安装
 
