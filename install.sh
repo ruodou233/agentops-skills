@@ -27,6 +27,15 @@ PYEOF
 )
 [ ${#ENTRIES[@]} -eq 0 ] && { echo "解析 catalog.yml 失败"; exit 1; }
 
+# 仓名别名 → catalog install_name；目录仍用短名
+if [ ${#WANT[@]} -gt 0 ]; then
+  for i in "${!WANT[@]}"; do
+    case "${WANT[$i]}" in
+      claude-cache-keepalive) WANT[$i]=cache-keepalive ;;
+    esac
+  done
+fi
+
 # 未知名称校验
 if [ ${#WANT[@]} -gt 0 ]; then
   for w in "${WANT[@]}"; do
