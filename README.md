@@ -15,6 +15,7 @@ A collection of practical agent skills for research, writing, product planning, 
 - **处理资料和写作**：`audio-transcribe` 把会议、访谈、课程、播客转成文字，`de-ai-taste` 帮文章、讲稿和口播去掉机器感。
 - **把大活交给 AI**：`agent-orchestration` 分工跑长任务，`connect-computers` 连起设备，`upgrade-audit` 把干活的经验留下来。
 - **额度花在值得的地方**：`free-token-eggs` 看看有什么鸡蛋可领，`codex-reset-watch` 看今天能怎么蹬，`cache-keepalive` 算算长会话保温值不值。
+- **在 Mac 上把游戏玩起来**：`mac-game-library-advisor` 先把 Steam 库过一遍，分清原生、Whisky/GPTK 兼容和被反作弊挡住的，再决定装不装兼容层。
 
 ## 设计原理
 
@@ -40,6 +41,7 @@ A collection of practical agent skills for research, writing, product planning, 
 | [community-buzz](https://github.com/ruodou233/community-buzz) | 想听真实口碑？从社区里挖使用体验、竞品痛点和技术争议<br>Find real user experiences, product comparisons, and disagreements in online communities, with links to the original discussions. | 独立可用；可单独调研口碑，也可补充 smart-buyer 的实践反馈 |
 | [codex-reset-watch](https://github.com/ruodou233/codex-reset-watch) | Codex 额度哨兵：看看还能蹬多久，重任务该现在上还是缓一缓<br>Track Codex usage limits, spending pace, and reset signals to plan your next tasks. | 独立可用；自动读取需本机 Codex CLI，也支持手动输入 |
 | [polymarket-anomaly-watch](https://github.com/ruodou233/polymarket-anomaly-watch) | 每天醒来就有一份科技情报——市场异动、GitHub 热榜、App Store 榜单，AI 替你盯着。<br>Monitor Polymarket anomalies, GitHub trends, and App Store rankings for a daily tech briefing. | 独立可用；不含通知推送层，需自行接入 |
+| [mac-game-library-advisor](https://github.com/ruodou233/mac-game-library-advisor) | Mac 想玩 Windows 游戏，先别急着装兼容层：把 Steam 库过一遍，哪些原生能跑、哪些 Whisky/GPTK 跑得动、哪些卡在反作弊，一次说清。<br>Sort a Steam library into what runs natively on a Mac, what works under Whisky/GPTK, and what anti-cheat blocks — then get similar-game picks. | 独立可用；兼容资料每次现搜，不依赖内置名单 |
 
 以下不是常规 skill（没有 SKILL.md，install.sh 不会自动安装），按各自 README 手动接入：
 

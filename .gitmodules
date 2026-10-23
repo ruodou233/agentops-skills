@@ -43,3 +43,6 @@
 [submodule "skills/codex-reset-watch"]
 	path = skills/codex-reset-watch
 	url = https://github.com/ruodou233/codex-reset-watch.git
+[submodule "skills/mac-game-library-advisor"]
+	path = skills/mac-game-library-advisor
+	url = https://github.com/ruodou233/mac-game-library-advisor.git

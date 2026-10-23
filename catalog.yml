@@ -87,3 +87,9 @@ skills:
     requires: []
     recommends: []
     platforms: [claude, codex]
+  - repo: https://github.com/ruodou233/mac-game-library-advisor
+    path: skills/mac-game-library-advisor
+    install_name: mac-game-library-advisor
+    requires: []
+    recommends: []
+    platforms: [claude, codex]
